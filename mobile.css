@@ -738,9 +738,6 @@ flex-direction: column;
     transition: transform 0.3s ease, color 0.3s ease;
     cursor: pointer;
 }
-
-
-}
 .loader {
   width: 100px;
   height: 100px;
@@ -774,4 +771,9 @@ flex-direction: column;
     background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px),50% 50%,50% calc(0% - 2px),50% calc(100% + 2px),100% 50%,100% calc(0% - 2px),100% calc(100% + 2px);
  }
 }
+
+
+}
+
+
   
