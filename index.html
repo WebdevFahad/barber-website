@@ -5,15 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=9">
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="shortcut icon" href="image/logo-porfolu.jfif" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+
+
+
+
+<!-- ✅ Animate.css -->
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></noscript>
+
+<!-- ✅ Hover.css -->
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"></noscript>
+
+<!-- ✅ Font Awesome (deferred) -->
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+
+
+
+   
+<!-- 
     <link rel="stylesheet" href="mobile.css">
-    <link rel="stylesheet" href="tablet.css">
+    <link rel="stylesheet" href="tablet.css"> -->
+    <link rel="shortcut icon" href="image/logo-porfolu.jfif" type="image/x-icon">
 
 </head>
 
@@ -165,7 +188,7 @@
                     </li>
                     <li class="service-1">
                         <div class="ser1l1">
-                            <img src="image/coding-sign.png" alt="" width="100px" style="border-radius: 50%; ">
+                            <img src="image/coding-sign.webp" alt="" width="100px" style="border-radius: 50%; ">
                         </div>
                         <div class="ser1l2">
                             <h2>Developer</h2>
@@ -201,8 +224,9 @@
         <div class="main-2">
             <div class="m2l1">
                 <div class="video-section">
-                    <video src="video/coding2.mp4" autoplay loop muted playsinline height="300px"
+                    <video src="video/coding2.mp4" autoplay loop muted playsinline preload="none" poster="preview.jpg" height="300px"
                         style="border-radius:1rem ;"></video>
+                        
                 </div>
                 <div class="review">
                     <h1>My Clients Get,s the demanding Work from me</h1>
@@ -222,7 +246,7 @@
             <div class="project-section">
                 <div class="project1  " id="project-bar">
                     <div class="image animationshow ">
-                        <a href="newbar.html" target="_blank"> <img src="image/bar-poster.png" alt=""></a>
+                        <a href="newbar.html" target="_blank"> <img src="image/bar-poster1.webp" alt="" loading="lazy"></a>
                     </div>
                     <div class="textofproject animationshow ">
                         <h2>Barber Shop</h2>
@@ -235,7 +259,7 @@
                 </div>
                 <div class="project1 " id="project-res">
                     <div class="image animationshow  ">
-                        <a href="Resturent.html" target="_blank"> <img src="image/resturant-poster.png" alt=""></a>
+                        <a href="Resturent.html" target="_blank"> <img src="image/resturant-poster.webp" alt="" loading="lazy"></a>
                     </div>
                     <div class="textofproject animationshow ">
                         <h2>Resturent Website</h2>
@@ -247,7 +271,7 @@
                 </div>
                 <div class="project1 " id="project-movie">
                     <div class="image animationshow ">
-                        <a href="movie.html" target="_blank"> <img src="image/movie-poster.png" alt=""></a>
+                        <a href="movie.html" target="_blank"> <img src="image/movie-poster.png" alt="" loading="lazy"></a>
                     </div>
                     <div class="textofproject animationshow ">
                         <h2>Movie Poster with APi</h2>
@@ -259,7 +283,7 @@
                 </div>
                 <div class="project1 " id="project-weather">
                     <div class="image  animationshow ">
-                        <a href="Weather-API.html" target="_blank"> <img src="image/wweather-poster.png" alt=""></a>
+                        <a href="Weather-API.html" target="_blank"> <img src="image/wweather-poster.webp" alt="" loading="lazy"></a>
                     </div>
                     <div class="textofproject animationshow ">
                         <h2>Weather-Forecast</h2>
@@ -391,7 +415,7 @@
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" ></script>
 
 </body>
-<script src="script.js"></script>
+<script src="script.js?v=3" defer></script>
 <script>
   // ✅ Initialize EmailJS
   emailjs.init("aN2jRVv31Bn_6Vg6K"); // Your actual public key
