@@ -668,7 +668,7 @@ border: 1px solid black;
   
   /* HTML: <div class="loader"></div> */
 .loader {
-  width: 100px;
+  width: 40px;
   aspect-ratio: 1;
   --c: linear-gradient(#f3f0f0 0 0);
   --r1: radial-gradient(farthest-side at bottom,#f0ecec 93%,#f0f0f000);
@@ -1161,12 +1161,13 @@ padding-bottom: 3rem;
   background-color: rgba(255, 255, 255, 0.15);
 
 }
-.formsection2{
+.formsection2 {
     z-index: 1;
     width: auto;
-    height: 400px;
-    display: flex;
+    height: max-content;
+    display: flex
+;
     flex-direction: column;
-    justify-content: space-evenly;
-    
+    justify-content: flex-start;
+    padding-bottom: 1rem;
 }
