@@ -1117,26 +1117,8 @@ padding-bottom: 3rem;
   
 }
 
-/* 🔁 Earth Model Behind Only the Form */
-.modalsection {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 0;
-  display: none;
-}
 
-.modalsection model-viewer {
-  height: 100%;
-  width: 100%;
-  pointer-events: none;
-  object-fit: cover;
-  filter: blur(0px) brightness(0.5); /* 🔆 Make it blurred and dark */
-}
 
-/* ✅ Form Stays on Top of the Model */
 .formsection {
   position: relative;
   z-index: 1;
