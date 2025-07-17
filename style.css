@@ -1387,7 +1387,7 @@ height: 100%;
 #form-status {
     margin-top: 1rem;
     text-align: center;
-    font-size: 0.9rem;
+    
     color: #f44336;
     font-size: 4rem;
 }
@@ -2012,6 +2012,10 @@ form input, form textarea {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 4px;
     font-size: 4rem;
+}
+#contactForm input {
+    font-size: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #contactForm textarea {
 
