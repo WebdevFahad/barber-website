@@ -62,39 +62,6 @@ window.addEventListener("load",()=>{
 
 
 
-  const form = document.getElementById("contactForm");
-  const status = document.getElementById("form-status");
- 
-
-  function validateEmail(email) {
-    // Simple email format check
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  }
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault(); // Stop form from submitting directly
-
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-    const message = form.message.value.trim();
-
-    if (!validateEmail(email)) {
-      status.textContent = "❌ Invalid email. Please check and try again.";
-      return;
-    }
-
-    // If everything is okay
-    status.style.color = "#4caf50";
-    status.textContent = "✅ Email looks good. Message sent!";
-    
-    // Simulate submission (replace with real API or FormSubmit/EmailJS)
-    setTimeout(() => {
-      form.reset();
-      status.textContent = "✅ Thank you! I'll get back to you soon.";
-    }, 1000);
-  });
-
 
   let hamburger=document.querySelector(".hamburger")
   let navhalf=document.querySelector(".nav-section2")

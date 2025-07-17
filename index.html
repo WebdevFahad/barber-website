@@ -69,6 +69,7 @@
             <a href="portfoliu.html"><button class="bt-ch hvr-underline-from-left">Home</button></a>
             <a href="#aboutonnav"><button class="bt-ch hvr-underline-from-left">About us</button></a>
             <a href="#contactForm"><button class="bt-ch hvr-underline-from-left">Contant us</button></a>
+             <a href="https://github.com/webdevFahad/portfolio-website" target="_blank"><button class="bt-ch hvr-underline-from-left">GitHub Source</button></a>
         </div>
         </div>
     
@@ -92,12 +93,12 @@
             <p>My approach combines <span style="font-weight: bolder;">clean code with modern design principles,</span> ensuring every project I work on is not just visually appealing but also performs excellently. <span style="font-weight: bolder;">I specialize in creating user-friendly interfaces that enhance the user experience.</span></p>
             <br>
          
-            <a href="#contactForm"><button class="hover-min">Hire me </button></a>
+            <a href="#contactForm"   id="aboutonnav"><button class="hover-min">Hire me </button></a>
         </div>
       
     </div>
-    <div class="main-pre1 animationshow-lefts">
-    <div  class="about-h1 " id="aboutonnav">
+    <div class="main-pre1 animationshow-lefts"  >
+    <div  class="about-h1 ">
         <h1>About Me</h1>
     </div>
     <div class="aboutme ">
@@ -146,7 +147,7 @@
    <div class="linkicons">
             <a href="https://www.linkedin.com/in/fahad-dev-366625373" target="_blank"><i class="fa-brands fa-linkedin  cos-linkdin"></i></a>
             <a href="https://instagram.com/rana_fahad99" target="_blank"> <i class="fa-brands fa-instagram  cos-insta "></i></a>
-            <a href="https://instagram.com/rana_fahad99" target="_blank"> <i class="fa-brands fa-square-x-twitter  cos-x"></i></a>
+        <a href="https://instagram.com/rana_fahad99" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
         </div> 
             </div>
         </div>
@@ -161,7 +162,7 @@
                 <ol style="list-style: none; gap: 2rem; display: flex; flex-direction: column-reverse; flex-wrap: wrap; " class=" animationshow-lefts">
                     <li class="service-1">
                         <div class="ser1l1">
-                            <img src="image/image/figma-sign.png" alt="" width="100px" style="border-radius: 50%; ">
+                            <img src="image/figma.png" alt="" width="100px" style="border-radius: 50%; ">
                         </div>
                         <div class="ser1l2">
                             <h2>Figma to WEB </h2>
@@ -221,8 +222,7 @@
         <div class="main-2">
             <div class="m2l1">
                 <div class="video-section">
-                    <!-- <video src="video/coding2.mp4" autoplay loop muted playsinline preload="none" poster="preview.jpg" height="300px"
-                        style="border-radius:1rem ;"></video> -->
+                   
                         
                         <video autoplay muted loop playsinline preload="none" poster="image/preview.jpg" height="300px" style="border-radius:1rem">
   <source src="video/coding2.mp4" type="video/mp4">
@@ -426,14 +426,29 @@
   "description": "Frontend developer skilled in HTML, CSS, JavaScript. Building responsive and interactive websites."
 }
 </script>
+
 <script>
+  emailjs.init("aN2jRVv31Bn_6Vg6K"); // Initialize EmailJS
 
-  emailjs.init("aN2jRVv31Bn_6Vg6K"); // Your actual public key
-
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("form-status");
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    // Simple email validation
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!regex.test(email)) {
+      status.style.color = "red";
+      status.textContent = "❌ Invalid email. Please check and try again.";
+      return;
+    }
+
+    // Send email via EmailJS
     emailjs.sendForm("service_zano937zano", "template_5nh3q1s", this)
       .then(() => {
         status.style.color = "green";
@@ -446,6 +461,5 @@
       });
   });
 </script>
-
 
 </html>

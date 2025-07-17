@@ -1056,10 +1056,10 @@ font-weight: 400;
     background-color:transparent;
   width: 100%;
      font-family: 'Times New Roman', Times, serif;
-     font-style: italic;
+     
      border: none;
      font-size: 2rem;
-
+color: white;
      border-bottom:3px solid rgb(236, 236, 236);
   }
   #contactForm textarea{
@@ -1361,6 +1361,13 @@ padding-bottom: 3rem;
     animation-timeline: view(100% 1%);
 
 }
+#form-status {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #f44336;
+    font-size: 2rem;
+}
 }
 
 
@@ -1376,6 +1383,13 @@ height: 100%;
     margin-top: 10rem;
     
    
+}
+#form-status {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #f44336;
+    font-size: 4rem;
 }
 .big-heading{
      display: flex;
